@@ -1,0 +1,49 @@
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #DDD;
+      }
+      .obal {
+        width:800px;
+        margin: 0 auto;
+
+      }
+      .hlavicka, .paticka {
+        padding: 10px ;
+        clear: both;
+
+        text-align: center;
+        background-color: #FFF;
+      }       
+      .hlavicka {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+      .paticka {
+        margin-top: 10px;
+      }
+      .pas { 
+      }
+      .pas:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .levy {
+        width:150px;
+        float:left;
+
+        xpadding: 10px ;
+        background-color: #FFF;
+      }  
+      .obsah {
+
+        width: 640px;
+        float: right;
+        padding: 10px;
+        background-color: #FFF;
+      }
+      .vpravo {
+        float: right;
+      }       

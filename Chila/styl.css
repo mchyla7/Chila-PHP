@@ -1,0 +1,136 @@
+:root {
+    --hlavni-barva: #e10600;
+    --sekundarni-barva: #1e1e1e;
+    --svetla-barva: #ffffff;
+    --tmava-barva: #000000;
+    --sediva-barva: #f1f1f1;
+    --pismo-hlavni: 'Roboto', sans-serif;
+    --pismo-nadpisy: 'Titillium Web', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--pismo-hlavni);
+    line-height: 1.6;
+    color: var(--sekundarni-barva);
+    background-color: var(--svetla-barva);
+}
+
+.obal {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--svetla-barva);
+}
+
+/* Hlavička */
+.hlavicka {
+    background-color: var(--tmava-barva);
+    color: var(--svetla-barva);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--hlavni-barva);
+}
+
+.hlavicka h1 {
+    font-family: var(--pismo-nadpisy);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.hlavicka span {
+    color: var(--hlavni-barva);
+}
+
+/* Menu */
+.levy {
+    width: 200px;
+    float: left;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    margin-bottom: 10px;
+}
+
+nav a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: var(--sekundarni-barva);
+    background-color: var(--sediva-barva);
+    border-left: 4px solid var(--hlavni-barva);
+}
+
+nav a:hover {
+    background-color: var(--hlavni-barva);
+    color: var(--svetla-barva);
+}
+
+/* Obsah */
+.obsah {
+    margin-left: 220px;
+    padding: 20px;
+    min-height: 400px;
+}
+
+.obsah h2 {
+    font-family: var(--pismo-nadpisy);
+    color: var(--hlavni-barva);
+    margin-bottom: 20px;
+}
+
+/* Tabulka jezdců */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--hlavni-barva);
+    color: var(--svetla-barva);
+}
+
+tr:nth-child(even) {
+    background-color: var(--sediva-barva);
+}
+
+/* Novinky */
+.novinky {
+    margin-top: 30px;
+}
+
+.novinka {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Patička */
+.paticka {
+    clear: both;
+    background-color: var(--sekundarni-barva);
+    color: var(--svetla-barva);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}

@@ -1,0 +1,485 @@
+/* Globální pozadí pro všechny články */
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Rozmazané pozadí overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    opacity: 0.3;
+    z-index: -2;
+}
+
+/* Bílé překrytí pro čitelnost */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: -1;
+}
+
+/* Hlavní kontejner článku */
+.clanek-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Header článku */
+.clanek-header {
+    border-bottom: 3px solid #e10600;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.clanek-header h1 {
+    color: #e10600;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    margin-top: 0;
+}
+
+.clanek-meta {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.clanek-meta span {
+    margin-right: 20px;
+}
+
+/* Obsah článku */
+.clanek-obsah {
+    line-height: 1.7;
+    font-size: 1.05em;
+}
+
+.clanek-obsah p {
+    margin-bottom: 20px;
+    text-align: justify;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.clanek-obsah h3 {
+    color: #e10600;
+    margin: 30px 0 20px 0;
+    font-size: 1.3em;
+    border-left: 4px solid #e10600;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.clanek-obsah h4 {
+    color: #c50500;
+    margin: 20px 0 15px 0;
+    font-size: 1.1em;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.clanek-obsah em {
+    color: #555;
+    font-style: italic;
+}
+
+.clanek-obsah strong {
+    color: #333;
+}
+
+.clanek-obsah p:first-child strong {
+    color: #e10600;
+}
+
+/* Speciální boxy a sekce */
+
+/* Box pro změny/novinky */
+.zmeny-box {
+    background: rgba(240, 248, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid #007acc;
+}
+
+.zmeny-seznam {
+    list-style: none;
+    padding: 0;
+}
+
+.zmeny-seznam li {
+    margin: 12px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    border-left: 3px solid #e10600;
+}
+
+/* Box pro výsledky/podium */
+.vysledky-box {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #ffd700;
+    margin: 25px 0;
+}
+
+.vysledky-box h3 {
+    background: none;
+    padding: 0;
+    color: #b8860b;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.podium {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pozice {
+    display: grid;
+    grid-template-columns: 40px 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.pozice-1 { background: linear-gradient(135deg, #ffd700, #ffed4e); }
+.pozice-2 { background: linear-gradient(135deg, #c0c0c0, #e8e8e8); }
+.pozice-3 { background: linear-gradient(135deg, #cd7f32, #daa520); }
+
+.pozice .cislo {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Startovní rošt */
+.start-rost {
+    background: rgba(248, 249, 250, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.rada {
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    border-left: 3px solid #007acc;
+}
+
+.rada h4 {
+    margin-bottom: 8px;
+    color: #007acc;
+    background: none;
+    padding: 0;
+}
+
+/* Statistiky */
+.statistiky-zmeny {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.stat-item {
+    background: rgba(248, 249, 250, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+}
+
+.stat-item h4 {
+    color: #e10600;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.stat-item p {
+    margin: 8px 0;
+    background: none;
+    padding: 0;
+}
+
+.statistiky-box {
+    background: rgba(248, 249, 250, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #6c757d;
+    margin: 30px 0;
+}
+
+.statistiky-box h4 {
+    color: #495057;
+    margin-bottom: 15px;
+    background: none;
+    padding: 0;
+}
+
+.statistiky-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.statistiky-box li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Box pro pravidla */
+.pravidlo-box {
+    background: rgba(255, 243, 205, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    margin: 20px 0;
+}
+
+.pravidlo-box p {
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Timeline pro strategie */
+.strategie-timeline {
+    background: rgba(240, 248, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.zastávka {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    border-left: 3px solid #28a745;
+}
+
+.zastávka .kolo {
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Citáty */
+blockquote {
+    background: rgba(255, 248, 220, 0.9);
+    padding: 20px;
+    border-left: 4px solid #ffc107;
+    font-style: italic;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* Závěrečný box */
+.zaver-box {
+    background: linear-gradient(135deg, rgba(225, 6, 0, 0.1), rgba(255, 68, 68, 0.1));
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #e10600;
+    margin: 30px 0;
+}
+
+.zaver-box h4 {
+    color: #e10600;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    background: none;
+    padding: 0;
+}
+
+.zaver-box p {
+    background: none;
+    padding: 0;
+    font-weight: 500;
+}
+
+/* Responzivní design */
+@media (max-width: 768px) {
+    .clanek-container {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .clanek-header h1 {
+        font-size: 1.5em;
+    }
+    
+    .clanek-obsah {
+        font-size: 1em;
+    }
+    
+    .pozice {
+        grid-template-columns: 30px 1fr;
+        gap: 10px;
+    }
+    
+    .zastávka {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    
+    .statistiky-zmeny {
+        grid-template-columns: 1fr;
+    }
+    
+    .clanek-meta span {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    body::before {
+        background-attachment: scroll;
+    }
+    
+    .clanek-container {
+        margin: 5px;
+        padding: 10px;
+    }
+    
+    .clanek-header h1 {
+        font-size: 1.3em;
+    }
+    
+    .clanek-obsah {
+        font-size: 0.95em;
+    }
+    
+    .clanek-obsah h3 {
+        font-size: 1.2em;
+        padding: 8px 12px;
+    }
+    
+    .clanek-obsah h4 {
+        font-size: 1em;
+        padding: 6px 10px;
+    }
+}
+
+/* Speciální třídy pro různé typy pozadí */
+.bg-monaco {
+    background-image: url('https://1949910950.rsc.cdn77.org/getthumbnail.aspx?q=60&crop=1&h=450&w=800&id_file=710407869');
+}
+
+.bg-monaco::before {
+    background-image: url('https://1949910950.rsc.cdn77.org/getthumbnail.aspx?q=60&crop=1&h=450&w=800&id_file=710407869');
+}
+
+.bg-f1-2026 {
+    background-image: url('https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto/q_auto/fom-website/2024/2026%20regulations/4');
+}
+
+.bg-f1-2026::before {
+    background-image: url('https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/f_auto/q_auto/fom-website/2024/2026%20regulations/4');
+}
+
+.bg-general {
+    background-image: url('https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/t_16by9North/f_auto/q_auto/trackside-images/2025/F1_Grand_Prix_of_Monaco___Practice/2216647063');
+}
+
+.bg-general::before {
+    background-image: url('https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/t_16by9North/f_auto/q_auto/trackside-images/2025/F1_Grand_Prix_of_Monaco___Practice/2216647063');
+}
+
+/* Navigační tlačítka pro články */
+.clanek-navigace {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(225, 6, 0, 0.2);
+}
+
+.nav-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #e10600;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background: #c50500;
+    transform: translateY(-2px);
+    color: white;
+}
+
+.nav-button.zpet {
+    background: #6c757d;
+}
+
+.nav-button.zpet:hover {
+    background: #5a6268;
+}
+
+/* Print styly */
+@media print {
+    body::before,
+    body::after {
+        display: none;
+    }
+    
+    .clanek-container {
+        background: white;
+        box-shadow: none;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    .clanek-navigace {
+        display: none;
+    }
+}

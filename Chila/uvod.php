@@ -13,7 +13,7 @@
         <div class="novinka-content">
             <h4><a href="./novinky/25.05.2025.php">Verstappen vyhrává v Monaku</a></h4>
             <p>Lando Norris dominoval závodu v Monaku a rozšířil svůj dosah na Piastriho</p>
-            <a href="./novinky/25.05.2025.php" class="cist-vice">Číst více</a>
+            <a href="https://1949910950.rsc.cdn77.org/getthumbnail.aspx?q=60&crop=1&h=450&w=800&id_file=710407869" class="cist-vice">Číst více</a>
         </div>
     </div>
     
@@ -33,28 +33,6 @@
             <p>Sedminásobný mistr světa mluví o své roli producenta filmu s Bradem Pittem.</p>
             <a href="novinky/06.09.2025.php" class="cist-vice">Číst více</a>
         </div>
-    </div>
-</div>
-
-<div class="rychle-odkazy">
-    <h3>Rychlé odkazy</h3>
-    <div class="odkazy-grid">
-        <a href="kalendar.php" class="rychly-odkaz">
-            <i class="fa-solid fa-calendar"></i>
-            <span>Kalendář závodů</span>
-        </a>
-        <a href="tymy.php" class="rychly-odkaz">
-            <i class="fa-solid fa-users"></i>
-            <span>Týmy a jezdci</span>
-        </a>
-        <a href="vysledky.php" class="rychly-odkaz">
-            <i class="fa-solid fa-trophy"></i>
-            <span>Výsledky</span>
-        </a>
-        <a href="statistiky.php" class="rychly-odkaz">
-            <i class="fa-solid fa-chart-bar"></i>
-            <span>Statistiky</span>
-        </a>
     </div>
 </div>
 
@@ -172,54 +150,7 @@
     color: white;
 }
 
-.rychle-odkazy {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 10px;
-}
 
-.rychle-odkazy h3 {
-    color: #e10600;
-    margin-bottom: 25px;
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.odkazy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.rychly-odkaz {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25px;
-    background: white;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #333;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.rychly-odkaz:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(225, 6, 0, 0.2);
-    color: #e10600;
-}
-
-.rychly-odkaz i {
-    font-size: 2em;
-    margin-bottom: 15px;
-    color: #e10600;
-}
-
-.rychly-odkaz span {
-    font-weight: bold;
-    text-align: center;
-}
 
 @media (max-width: 768px) {
     .uvod-header {
@@ -251,10 +182,6 @@
 @media (max-width: 480px) {
     .odkazy-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .rychle-odkazy {
-        padding: 20px;
     }
 }
 </style>
